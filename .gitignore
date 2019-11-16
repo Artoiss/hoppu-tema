@@ -12,3 +12,4 @@
 # misc
 .idea
 *package-lock.json
+.env
