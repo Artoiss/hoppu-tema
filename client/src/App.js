@@ -20,10 +20,9 @@ class App extends React.Component {
                     <Button color={'primary'} variant={'contained'} onClick={() => this.handleScannerClick()}>Scan
                         QR</Button>
                 </header>
-                {showScanner && (
                     <div className={'reader-container'}>
-                        <QRReader />
-                    </div>)}
+                        <QRReader showScanner={showScanner} hideScanner={() => this.hideScanner()} />
+                    </div>
             </div>
         );
     }
@@ -34,6 +33,12 @@ class App extends React.Component {
                 showScanner: !this.state.showScanner
             }
         )
+    }
+
+    hideScanner() {
+        this.setState({
+            showScanner: false
+        })
     }
 }
 
