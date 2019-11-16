@@ -13,7 +13,7 @@ const Main = () => {
           <div>
             <div>
 
-            <Link to="/hoppu-tema/sell"">
+            <Link to="/hoppu-tema/sell">
             <Button color={'primary'} variant={'contained'}>
                 Sell</Button>
             </Link>
