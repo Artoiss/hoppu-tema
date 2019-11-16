@@ -62,15 +62,20 @@ const getImage = (id, image_id) =>
   );
 
 const parseOrderData = data => {
+  const array = [];
   const order = data.order;
-  console.log(order);
-  const product_id = order.line_items.map(item => item.product_id);
-  const title = order.line_items.map(item => item.title);
-  const total_price = order.total_price;
+  const orderArray = order.line_items.map(item => {
+    const color = item.variant_title.split(" ")[2];
+    const orderObject = {
+      product_id: item.product_id,
+      title: item.title,
+      total_price: item.total_price,
+      color: color
+    };
+    return orderObject;
+  });
   return {
-    product_id: product_id,
-    title: title,
-    total_price: total_price
+    orderArray
   };
 };
 
