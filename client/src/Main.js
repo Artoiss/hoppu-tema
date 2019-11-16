@@ -23,8 +23,8 @@ const Main = () => {
                 Store</Button>
             </Link>
             </div>
-            <Route exact path="/sell" render={() =><App/> }/>
-            <Route exact path="/store" render={() =><Store/> }/>
+            <Route path="/sell" render={() =><App/> }/>
+            <Route path="/store" render={() =><Store/> }/>
           </div>
         </Router>
       </div>
