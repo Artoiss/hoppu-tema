@@ -3,11 +3,12 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import App from './App'
 import Store from './Store'
 import {Button} from './components/index'
+import { HashRouter } from 'react-router-dom';
 
 const Main = () => {
     return (
         <div>
-            <Router>
+            <HashRouter>
                 <div>
                     <div>
                         <Link to="/sell">
@@ -20,7 +21,7 @@ const Main = () => {
                     <Route exact path="/sell" render={() => <App/>}/>
                     <Route exact path="/store" render={() => <Store/>}/>
                 </div>
-            </Router>
+            </HashRouter>
         </div>
     )
 };
