@@ -7,10 +7,6 @@ const config = require("./config");
 //app.use(express.static('build'))
 app.use(bodyParser.json());
 
-// const getProductById = axios.get(
-//   `https://${API_KEY}:${PASSWORD}${API_URL}/products/${product_id}.json`
-// );
-
 app.get("/api/order/:id", (req, response) => {
   const id = req.params.id;
   getOrder(id)
@@ -18,7 +14,9 @@ app.get("/api/order/:id", (req, response) => {
       const orderData = parseOrderData(res.data);
       response.json(orderData);
     })
-    .catch(err => response.status(500).send({ error: err }));
+    .catch(err => {
+      response.status(500).send({ error: err });
+    });
 });
 
 app.get("/api/product/:id", (req, response) => {
@@ -38,9 +36,7 @@ app.get("/api/product_image/:id", (req, response) => {
   const image_id = req.query.imageId;
   getImage(id, image_id)
     .then(res => {
-      console.log(res.data);
       const imageData = parseImageData(res.data);
-      console.log("IMGGGDATA", imageData);
       response.json(imageData);
     })
     .catch(err => response.status(500).send({ error: err }));
@@ -67,13 +63,14 @@ const getImage = (id, image_id) =>
 
 const parseOrderData = data => {
   const order = data.order;
-  const name = order.shipping_address.first_name;
+  console.log(order);
   const product_id = order.line_items.map(item => item.product_id);
   const title = order.line_items.map(item => item.title);
+  const total_price = order.total_price;
   return {
-    first_name: name,
     product_id: product_id,
-    title: title
+    title: title,
+    total_price: total_price
   };
 };
 
