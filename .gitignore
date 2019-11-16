@@ -13,3 +13,4 @@
 .idea
 *package-lock.json
 .env
+*/build
