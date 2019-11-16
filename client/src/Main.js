@@ -4,8 +4,8 @@ import App from './App'
 import Store from './Store'
 import {Button} from './components/index'
 import { HashRouter } from 'react-router-dom';
-
 const Main = () => {
+
     return (
         <div>
             <HashRouter>
@@ -18,6 +18,7 @@ const Main = () => {
                             <Button color={'primary'} variant={'contained'}>Store</Button>
                         </Link>
                     </div>
+
                     <Route exact path="/sell" render={() => <App/>}/>
                     <Route exact path="/store" render={() => <Store/>}/>
                 </div>
