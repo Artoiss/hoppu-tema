@@ -7,7 +7,7 @@ import {Button} from './components/index'
 const Home = () => {
   return (
       <div>
-      asdasd
+      <h1>Hello!</h1>
       </div>
     )
   }
