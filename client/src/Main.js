@@ -24,8 +24,8 @@ const Main = () => {
             </Link>
             </div>
             <Route exact path="/" render={()=><Home/>}/>
-            <Route path="/sell" render={() =><App/> }/>
-            <Route path="/store" render={() =><Store/> }/>
+            <Route path="/hoppu-tema/sell" render={() =><App/> }/>
+            <Route path="/hoppu-tema/store" render={() =><Store/> }/>
           </div>
         </Router>
       </div>
