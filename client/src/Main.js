@@ -13,12 +13,12 @@ const Main = () => {
           <div>
             <div>
 
-            <Link to="/sell">
+            <Link to="/hoppu-tema/sell"">
             <Button color={'primary'} variant={'contained'}>
                 Sell</Button>
             </Link>
 
-            <Link to="/store">
+            <Link to="/hoppu-tema/store">
             <Button color={'primary'} variant={'contained'}>
                 Store</Button>
             </Link>
