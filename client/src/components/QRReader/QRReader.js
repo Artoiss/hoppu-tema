@@ -3,7 +3,6 @@ import QrReader from 'react-qr-reader';
 import './QRReader.scss';
 
 const QRReader = () => {
-
     const [result, setResult] = useState(undefined);
 
     const handleScan = (data) => {
