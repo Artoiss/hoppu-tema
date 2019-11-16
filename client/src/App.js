@@ -1,7 +1,6 @@
 import React from 'react';
-import QRReader from './components/QRReader/QRReader'
+import {QRReader, Logo, Button} from './components/index'
 import './App.scss';
-import Logo from "./components/Logo/Logo";
 
 class App extends React.Component {
     constructor(props) {
@@ -17,8 +16,9 @@ class App extends React.Component {
             <div className='app-root'>
                 <header className='header-container'>
                     <Logo width={'300px'} height={'150px'} />
-                    <p className={'header'}>Hoppu-App</p>
-                    <button onClick={() => this.handleScannerClick()}>Scan QR</button>
+                    <p className={'header'}>Scan QR-code from your package.</p>
+                    <Button color={'primary'} variant={'contained'} onClick={() => this.handleScannerClick()}>Scan
+                        QR</Button>
                 </header>
                 {showScanner && (
                     <div className={'reader-container'}>
