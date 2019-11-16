@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Link,
 import App from './App'
 import Store from './Store'
 import {Button, Logo} from './components/index'
-
+import Home from './Home'
 const Main = () => {
   return (
 
@@ -23,6 +23,7 @@ const Main = () => {
                 Store</Button>
             </Link>
             </div>
+            <Route exact path="/" render={()=><Home/>}/>
             <Route path="/sell" render={() =><App/> }/>
             <Route path="/store" render={() =><Store/> }/>
           </div>
