@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Link,
 import App from './App'
 import Store from './Store'
 import {Button, Logo} from './components/index'
-
+import Home from './Home'
 const Main = () => {
   return (
 
@@ -13,18 +13,19 @@ const Main = () => {
           <div>
             <div>
 
-            <Link to="/sell">
+            <Link to="/hoppu-tema/sell">
             <Button color={'primary'} variant={'contained'}>
                 Sell</Button>
             </Link>
 
-            <Link to="/store">
+            <Link to="/hoppu-tema/store">
             <Button color={'primary'} variant={'contained'}>
                 Store</Button>
             </Link>
             </div>
-            <Route path="/sell" render={() =><App/> }/>
-            <Route path="/store" render={() =><Store/> }/>
+            <Route exact path="/" render={()=><Home/>}/>
+            <Route path="/hoppu-tema/sell" render={() =><App/> }/>
+            <Route path="/hoppu-tema/store" render={() =><Store/> }/>
           </div>
         </Router>
       </div>
