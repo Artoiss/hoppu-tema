@@ -1,0 +1,15 @@
+.card-media {
+  height: 250px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-content {
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+}
