@@ -25,22 +25,21 @@ app.get("/api/product/:id", (req, response) => {
     .then(res => {
       console.log(res.data);
       const productData = parseProductData(res.data);
-      console.log("PRRRRRDATA", productData);
       response.json(productData);
     })
     .catch(err => response.status(500).send({ error: err }));
 });
 
-app.get("/api/product_image/:id", (req, response) => {
-  const id = req.params.id;
-  const image_id = req.query.imageId;
-  getImage(id, image_id)
-    .then(res => {
-      const imageData = parseImageData(res.data);
-      response.json(imageData);
-    })
-    .catch(err => response.status(500).send({ error: err }));
-});
+// app.get("/api/product_image/:id", (req, response) => {
+//   const id = req.params.id;
+//   // const image_id = req.query.imageId;
+//   getImage(id, image_id)
+//     .then(res => {
+//       const imageData = parseImageData(res.data);
+//       response.json(imageData);
+//     })
+//     .catch(err => response.status(500).send({ error: err }));
+// });
 
 const PORT = 3001;
 app.listen(PORT, () => {
@@ -55,21 +54,30 @@ const getProduct = id =>
   axios.get(
     `https://${config.API_KEY}:${config.PASSWORD}${config.API_URL}/products/${id}.json`
   );
+//
+// const getImage = id =>
+//   axios.get(
+//     `https://${config.API_KEY}:${config.PASSWORD}${config.API_URL}/products/${id}/images.json`
+//   );
 
-const getImage = (id, image_id) =>
-  axios.get(
-    `https://${config.API_KEY}:${config.PASSWORD}${config.API_URL}/products/${id}/images/${image_id}}.json`
-  );
-
+// const getImageAndProduct = id => {
+//   return axios.all([
+//     axios.get(
+//       `https://${config.API_KEY}:${config.PASSWORD}${config.API_URL}/products/${id}.json`
+//     ),
+//     axios.get(
+//       `https://${config.API_KEY}:${config.PASSWORD}${config.API_URL}/products/${id}/images.json`
+//     )
+//   ]);
+// };
 const parseOrderData = data => {
-  const array = [];
   const order = data.order;
   const orderArray = order.line_items.map(item => {
     const color = item.variant_title.split(" ")[2];
     const orderObject = {
       product_id: item.product_id,
       title: item.title,
-      total_price: item.total_price,
+      total_price: item.price,
       color: color
     };
     return orderObject;
@@ -83,19 +91,17 @@ const parseProductData = data => {
   const product = data.product;
   const image_id = product.variants[0].image_id;
   const size = product.variants[0].option1;
-  const color = product.variants[0].option2;
-
+  const image_url = product.image.src;
   return {
-    image_id,
-    size,
-    color
+    image_url,
+    size
   };
 };
 
-const parseImageData = data => {
-  const image = data.image;
-  const image_url = image.src;
-  return {
-    image_url
-  };
-};
+// const parseImageData = data => {
+//   const image = data.image;
+//   const image_url = image.src;
+//   return {
+//     image_url
+//   };
+// };
