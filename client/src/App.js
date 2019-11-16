@@ -16,7 +16,7 @@ class App extends React.Component {
             <div className='app-root'>
                 <header className='header-container'>
                     <Logo width={'300px'} height={'150px'} />
-                    <p className={'header'}>Hoppu-App</p>
+                    <p className={'header'}>Scan QR-code from your package.</p>
                     <Button color={'primary'} variant={'contained'} onClick={() => this.handleScannerClick()}>Scan
                         QR</Button>
                 </header>
