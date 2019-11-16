@@ -26,8 +26,22 @@ app.get("/api/product/:id", (req, response) => {
   getProduct(id)
     .then(res => {
       console.log(res.data);
-      const orderData = parseOrderData(res.data);
-      response.json(orderData);
+      const productData = parseProductData(res.data);
+      console.log("PRRRRRDATA", productData);
+      response.json(productData);
+    })
+    .catch(err => response.status(500).send({ error: err }));
+});
+
+app.get("/api/product_image/:id", (req, response) => {
+  const id = req.params.id;
+  const image_id = req.query.imageId;
+  getImage(id, image_id)
+    .then(res => {
+      console.log(res.data);
+      const imageData = parseImageData(res.data);
+      console.log("IMGGGDATA", imageData);
+      response.json(imageData);
     })
     .catch(err => response.status(500).send({ error: err }));
 });
@@ -46,15 +60,16 @@ const getProduct = id =>
     `https://${config.API_KEY}:${config.PASSWORD}${config.API_URL}/products/${id}.json`
   );
 
+const getImage = (id, image_id) =>
+  axios.get(
+    `https://${config.API_KEY}:${config.PASSWORD}${config.API_URL}/products/${id}/images/${image_id}}.json`
+  );
+
 const parseOrderData = data => {
   const order = data.order;
-  console.log(order);
   const name = order.shipping_address.first_name;
-  console.log("@@@", name);
   const product_id = order.line_items.map(item => item.product_id);
-  console.log(product_id);
   const title = order.line_items.map(item => item.title);
-  console.log(title);
   return {
     first_name: name,
     product_id: product_id,
@@ -63,17 +78,22 @@ const parseOrderData = data => {
 };
 
 const parseProductData = data => {
-  const product = data.order;
-  console.log(order);
-  const name = order.shipping_address.first_name;
-  console.log("@@@", name);
-  const product_id = order.line_items.map(item => item.product_id);
-  console.log(product_id);
-  const title = order.line_items.map(item => item.title);
-  console.log(title);
+  const product = data.product;
+  const image_id = product.variants[0].image_id;
+  const size = product.variants[0].option1;
+  const color = product.variants[0].option2;
+
   return {
-    first_name: name,
-    product_id: product_id,
-    title: title
+    image_id,
+    size,
+    color
+  };
+};
+
+const parseImageData = data => {
+  const image = data.image;
+  const image_url = image.src;
+  return {
+    image_url
   };
 };
