@@ -7,6 +7,10 @@ const config = require("./config");
 //app.use(express.static('build'))
 app.use(bodyParser.json());
 
+// const getProductById = axios.get(
+//   `https://${API_KEY}:${PASSWORD}${API_URL}/products/${product_id}.json`
+// );
+
 app.get("/api/order/:id", (req, response) => {
   const id = req.params.id;
   getOrder(id)
@@ -15,9 +19,7 @@ app.get("/api/order/:id", (req, response) => {
       console.log(orderData);
       response.json(orderData);
     })
-    .catch(err => {
-      response.status(500).send({ error: err });
-    });
+    .catch(err => response.status(500).send({ error: err }));
 });
 
 app.get("/api/product/:id", (req, response) => {
