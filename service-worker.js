@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hoppu-tema/precache-manifest.e4124b39933c035a79facbeb250c4b2b.js"
+  "/hoppu-tema/precache-manifest.f7237b41811309bdd6fe5c7abc5ffd23.js"
 );
 
 self.addEventListener('message', (event) => {
