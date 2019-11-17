@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import Store from "./Store";
+import Home from "./Home";
 import { Button } from "./components/index";
 import { HashRouter } from "react-router-dom";
 
@@ -19,8 +20,7 @@ const Main = () => {
   const [navisibility, setNavisibility] = useState(true)
 
 
-  const handleClick = (visibility) => (event) => {
-    event.preventDefault()
+  const handleClick = (visibility)  => {
     setNavisibility(visibility)
   }
 
@@ -28,7 +28,7 @@ const Main = () => {
     <div>
       <HashRouter>
         <div>
-          {navisibility && (
+
           <div>
             <Link to="/sell">
               <Button color={"primary"} variant={"contained"} onClick={() => handleClick(false)}>
@@ -41,7 +41,7 @@ const Main = () => {
               </Button>
             </Link>
           </div>
-  )}
+          <Route exact path="/" render={() => <Home />} />
           <Route exact path="/sell" render={() => <App />} />
           <Route exact path="/store" render={() => <Store />} />
         </div>
