@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/hoppu-tema/static/css/main.4c5bdf75.chunk.css",
-    "main.js": "/hoppu-tema/static/js/main.98eb5593.chunk.js",
-    "main.js.map": "/hoppu-tema/static/js/main.98eb5593.chunk.js.map",
+    "main.css": "/hoppu-tema/static/css/main.00762c6f.chunk.css",
+    "main.js": "/hoppu-tema/static/js/main.cad4ba54.chunk.js",
+    "main.js.map": "/hoppu-tema/static/js/main.cad4ba54.chunk.js.map",
     "runtime-main.js": "/hoppu-tema/static/js/runtime-main.0c28b2d5.js",
     "runtime-main.js.map": "/hoppu-tema/static/js/runtime-main.0c28b2d5.js.map",
-    "static/js/2.f344e6f8.chunk.js": "/hoppu-tema/static/js/2.f344e6f8.chunk.js",
-    "static/js/2.f344e6f8.chunk.js.map": "/hoppu-tema/static/js/2.f344e6f8.chunk.js.map",
+    "static/js/2.e43ed323.chunk.js": "/hoppu-tema/static/js/2.e43ed323.chunk.js",
+    "static/js/2.e43ed323.chunk.js.map": "/hoppu-tema/static/js/2.e43ed323.chunk.js.map",
     "index.html": "/hoppu-tema/index.html",
-    "precache-manifest.c1d59d28ebc09e19a9ede23181ec0454.js": "/hoppu-tema/precache-manifest.c1d59d28ebc09e19a9ede23181ec0454.js",
+    "precache-manifest.bbc9e057fb54619bc80fb7f71e11b487.js": "/hoppu-tema/precache-manifest.bbc9e057fb54619bc80fb7f71e11b487.js",
     "service-worker.js": "/hoppu-tema/service-worker.js",
-    "static/css/main.4c5bdf75.chunk.css.map": "/hoppu-tema/static/css/main.4c5bdf75.chunk.css.map",
+    "static/css/main.00762c6f.chunk.css.map": "/hoppu-tema/static/css/main.00762c6f.chunk.css.map",
     "static/media/hubert_logo_color.svg": "/hoppu-tema/static/media/hubert_logo_color.ce674f71.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0c28b2d5.js",
-    "static/js/2.f344e6f8.chunk.js",
-    "static/css/main.4c5bdf75.chunk.css",
-    "static/js/main.98eb5593.chunk.js"
+    "static/js/2.e43ed323.chunk.js",
+    "static/css/main.00762c6f.chunk.css",
+    "static/js/main.cad4ba54.chunk.js"
   ]
 }

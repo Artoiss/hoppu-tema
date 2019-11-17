@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cdb37919671490fe5fa59fe926442353",
+    "revision": "595da20b79c695026e3141af45d04939",
     "url": "/hoppu-tema/index.html"
   },
   {
-    "revision": "2e5231a7abe2eb649448",
-    "url": "/hoppu-tema/static/css/main.4c5bdf75.chunk.css"
+    "revision": "e5ea948092b8d4ab8895",
+    "url": "/hoppu-tema/static/css/main.00762c6f.chunk.css"
   },
   {
-    "revision": "de19f5648550a3cd42d0",
-    "url": "/hoppu-tema/static/js/2.f344e6f8.chunk.js"
+    "revision": "e3e1c2c0d66b2585cde4",
+    "url": "/hoppu-tema/static/js/2.e43ed323.chunk.js"
   },
   {
-    "revision": "2e5231a7abe2eb649448",
-    "url": "/hoppu-tema/static/js/main.98eb5593.chunk.js"
+    "revision": "e5ea948092b8d4ab8895",
+    "url": "/hoppu-tema/static/js/main.cad4ba54.chunk.js"
   },
   {
     "revision": "f8f36a3605e50464f289",
