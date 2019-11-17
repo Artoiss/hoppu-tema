@@ -2,14 +2,12 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require("cors");
+app.use(cors());
 
 const config = require("./config");
-//app.use(express.static('build'))
+// app.use(express.static("build"));
 app.use(bodyParser.json());
-
-// const getProductById = axios.get(
-//   `https://${API_KEY}:${PASSWORD}${API_URL}/products/${product_id}.json`
-// );
 
 app.get("/api/order/:id", (req, response) => {
   const id = req.params.id;
@@ -63,18 +61,6 @@ const parseOrderData = async data => {
 
   return results;
 };
-//  const orderArray = order.line_items.map(item => {
-//    const orderObject = {
-//      product_id: item.product_id,
-//      title: item.title,
-//      total_price: item.price
-//    };
-//    return orderObject;
-//  });
-//  return {
-//    orderArray
-//  };
-//};
 
 const parseProductData = data => {
   const product = data.product;
