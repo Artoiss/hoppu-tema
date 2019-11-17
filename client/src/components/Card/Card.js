@@ -8,7 +8,7 @@ import "./Card.scss";
 
 const Card = (props) => {
     return (
-        <MUICard>
+        <MUICard className={"card-root"}>
             <CardActionArea>
                 <CardMedia
                     className={"card-media"}
