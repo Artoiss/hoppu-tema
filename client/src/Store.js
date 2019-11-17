@@ -8,8 +8,8 @@ class Store extends React.Component {
     return (
       <div>
         <header className="header-container">
-          <Logo width={"300px"} height={"150px"} />
-          <p> future of digital retail </p>
+          <Logo width={"300px"} height={"100px"} />
+          <p> The future of digital retail </p>
         </header>
         <div className={"cards-container"}>
           <Card
