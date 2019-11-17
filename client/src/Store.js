@@ -21,7 +21,7 @@ class Store extends React.Component {
             desc={"New red skiing pants, never used."}
           />
           <Card image={"https://cdn.shopify.com/s/files/1/0217/3274/products/pau3053_106_h_940x.jpg?v=1543863314"}
-                name={"Leather shoes,"}
+                name={"Shoes,"}
                 size={"42"}
                 price={"15€"}
                 desc={"New unused leather shoes"}/>
@@ -29,8 +29,8 @@ class Store extends React.Component {
                 image={
                     "https://cdn.shopify.com/s/files/1/0260/7815/0733/products/hat_360x.jpg?v=1573936316"
                   }
-                name={"Fedora hat"}
-                size={"One size"}
+                name={"Fedora"}
+                size={"S"}
                 price={"30€"}
                 desc={"Used fedora hat."}
                 />
