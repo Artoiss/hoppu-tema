@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import QrReader from 'react-qr-reader';
 import './QRReader.scss';
+import QrReader from 'react-qr-reader'
+import {Button, Card} from "../index";
 
 const QRReader = (props) => {
     const [result, setResult] = useState(undefined);
@@ -25,7 +26,15 @@ const QRReader = (props) => {
                     onScan={handleScan}
                     onError={handleError}
                 />)}
-            {result && <p className={'reader-result'}>{result}</p>}
+            {result &&
+            <div>
+                <Card image={"https://cdn.shopify.com/s/files/1/0217/3274/products/pau3053_106_h_940x.jpg?v=1543863314"}
+                      name={"Leather shoes,"}
+                      size={"42"}
+                      price={"15€"}
+                      desc={"New unused leather shoes"}/>
+                <Button variant={"contained"} color={"primary"}>Sell</Button>
+            </div>}
         </div>
     )
 };

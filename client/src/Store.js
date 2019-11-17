@@ -1,7 +1,6 @@
-import React from "react";
-import { Card } from "./components/index";
-import { QRReader, Logo, Button } from "./components/index";
-import "./Store.scss";
+import React from 'react';
+import {Card, Logo} from './components/index';
+import './Store.scss';
 
 class Store extends React.Component {
   render() {
@@ -26,5 +25,6 @@ class Store extends React.Component {
     );
   }
 }
+
 
 export default Store;

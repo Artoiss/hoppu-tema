@@ -12,7 +12,7 @@ const Card = (props) => {
             <CardActionArea>
                 <CardMedia
                     className={"card-media"}
-                    image={"https://cdn.shopify.com/s/files/1/0108/6324/7424/products/descente-stock-ski-pant-2020-orange-1_2000x.jpg"}
+                    image={props.image}
                     title={"cardImage"}
                 />
                 <CardContent>
