@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hoppu-tema/static/css/main.f9eeb689.chunk.css",
-    "main.js": "/hoppu-tema/static/js/main.be19dae2.chunk.js",
-    "main.js.map": "/hoppu-tema/static/js/main.be19dae2.chunk.js.map",
+    "main.js": "/hoppu-tema/static/js/main.29468090.chunk.js",
+    "main.js.map": "/hoppu-tema/static/js/main.29468090.chunk.js.map",
     "runtime-main.js": "/hoppu-tema/static/js/runtime-main.0c28b2d5.js",
     "runtime-main.js.map": "/hoppu-tema/static/js/runtime-main.0c28b2d5.js.map",
     "static/js/2.c1f1d969.chunk.js": "/hoppu-tema/static/js/2.c1f1d969.chunk.js",
     "static/js/2.c1f1d969.chunk.js.map": "/hoppu-tema/static/js/2.c1f1d969.chunk.js.map",
     "index.html": "/hoppu-tema/index.html",
-    "precache-manifest.183b8bede59a9d6608d79d4c56d29edb.js": "/hoppu-tema/precache-manifest.183b8bede59a9d6608d79d4c56d29edb.js",
+    "precache-manifest.e4124b39933c035a79facbeb250c4b2b.js": "/hoppu-tema/precache-manifest.e4124b39933c035a79facbeb250c4b2b.js",
     "service-worker.js": "/hoppu-tema/service-worker.js",
     "static/css/main.f9eeb689.chunk.css.map": "/hoppu-tema/static/css/main.f9eeb689.chunk.css.map",
     "static/media/hubert_logo_color.svg": "/hoppu-tema/static/media/hubert_logo_color.ce674f71.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0c28b2d5.js",
     "static/js/2.c1f1d969.chunk.js",
     "static/css/main.f9eeb689.chunk.css",
-    "static/js/main.be19dae2.chunk.js"
+    "static/js/main.29468090.chunk.js"
   ]
 }
