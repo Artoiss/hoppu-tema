@@ -5,7 +5,7 @@
   "homepage": "https://artoiss.github.io/hoppu-tema",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "node-sass": "^4.13.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
